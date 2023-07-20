@@ -1,0 +1,115 @@
+/* base styling */
+:root {
+    --base-font-size: 1rem; /* base font styling */
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* creating the two-column layout on the body */
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0px;
+    height: 100vh;
+}
+body > * {
+    width: 50%;
+}
+
+
+/* styling the banner image */
+body > img {
+    object-fit: cover;
+}
+
+
+/* styling the form */
+body > form {
+    padding: 90px 150px 0px;
+}
+
+/* the form heading */
+form > h1 {
+    font-size: calc( 2.5 * var(--base-font-size) );
+    margin-bottom: 18px;
+}
+form > p {
+    font-size: calc( 1.2 * var(--base-font-size) );
+    margin:0px 0px 45px;
+}
+
+/* the form logo */
+form > img {
+    transform: translateX( -17px );
+}
+
+/* the form labels and inputs */
+form > label, form > input {
+    display: block;
+    width: 100%;
+}
+form > label::first-letter {
+    text-transform: capitalize;
+}
+form > label {
+    margin: 8px 0px;
+    font-weight: 600;
+}
+form > input {
+    font-size: var(--base-font-size);
+    padding: 10px 15px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid lightgray;
+}
+
+
+/* the form "remember me" checkbox and "forgot password" link */
+form > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0px;
+    align-items: center;
+}
+form > div > a {
+    text-decoration: none;
+    color: #635dfb;
+} 
+form > div > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+}
+form > div > div > input[type="checkbox"] {
+    accent-color: #635dfb;
+    height: 20px;
+    width: 20px;
+}
+form > div > div > label {
+    font-size: var(--base-font-size);
+}
+form > div > div > label::first-letter {
+    text-transform: capitalize;
+}
+
+/* the form login button */
+form > input[type="submit"] {
+    background-color: #635dfb;
+    color: white;
+    font-size: calc( 1.2 * var(--base-font-size) );
+    font-weight: 600;
+    border: none;
+}
+
+
+/* adding hover, focus effect */
+form > input:focus {
+    border: 2px solid black;
+}
